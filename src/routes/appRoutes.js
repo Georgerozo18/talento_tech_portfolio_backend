@@ -4,7 +4,7 @@ const router = express.Router()
 
 // 2. Definición de las rutas
 router.get('/', (request, response)=>{
-    response.send('Hello George')
+    response.render('index')
 })
 
 // 3. Exportar el router para ser utilizado en otros archivos
