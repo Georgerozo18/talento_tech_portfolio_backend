@@ -1,3 +1,24 @@
 .page_container {
     padding: 1em;
 }
+
+.endpoints_list {
+    display: grid;
+    row-gap: 1em;
+}
+
+.get_endpoint {
+    background-color: #2e86de;
+}
+
+.post_endpoint {
+    background-color: #341f97;
+}
+
+.put_endpoint {
+    background-color: #10ac84;
+}
+
+.delete_endpoint {
+    background-color: #ee5253;
+}
