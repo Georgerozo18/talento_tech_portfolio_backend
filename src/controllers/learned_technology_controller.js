@@ -7,7 +7,6 @@ const fs = require('fs')
 const storage = multer.memoryStorage()
 const upload = multer({storage:storage})
 
-
 // 3. Creación de un elemento
 exports.create_technology = [
     upload.single('icon'),

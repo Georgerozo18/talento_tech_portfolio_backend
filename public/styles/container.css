@@ -2,6 +2,14 @@
     padding: 1em;
 }
 
+.page_paragraph {
+    margin-bottom: 1em;
+}
+
+.endpoints_title {
+    font-size: 1.5em;
+}
+
 .endpoints_list {
     display: grid;
     row-gap: 1em;

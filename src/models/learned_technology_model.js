@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const technology_schema = new mongoose.mongoose.Schema({
+const technology_schema = new mongoose.Schema({
     name:{
         type:String,
         required:true

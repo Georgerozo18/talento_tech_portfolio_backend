@@ -13,21 +13,37 @@
 <body>
     <div class="page_container">
         <h1>API Endpoints for Jorge Hernández Portfolio</h1>
-        <p>
+        <p class="page_paragraph">
             In this page you will see the functionality of available endpoints to the Portfolio Frontend, for the final
             project of
             Talent Tech Bootcamp.
         </p>
+        <h3 class="endpoints_title">Home dir</h3>
         <ul class="endpoints_list">
             <li><span class="get_endpoint">get</span><strong>/</strong> - return this page.</li>
-            <li><span class="post_endpoint">post</span><strong>/technology</strong> - create a new technology item.</li>
-            <li><span class="get_endpoint">get</span><strong>/technology/id</strong> - get a technology by specific id.
+        </ul>
+        <h3 class="endpoints_title">Technologies</h3>
+        <ul class="endpoints_list">
+            <li>
+                <span class="post_endpoint">post</span><strong>/technology</strong>
+                - create a new technology item.
             </li>
-            <li><span class="get_endpoint">get</span><strong>/technology</strong> - get all technologies list.</li>
-            <li><span class="put_endpoint">update</span><strong>/technology/id</strong> - update an exist technology
-                item.</li>
-            <li><span class="delete_endpoint">delete</span><strong>/technology/id</strong> - delete an exist technology
-                Item.
+            <li>
+                <span class="get_endpoint">get</span><strong>/technology/id</strong>
+                - get a technology by specific id.
+            </li>
+            <li>
+                <span class="get_endpoint">get</span><strong>/technology</strong>
+                - get all technologies list.
+            </li>
+            <li>
+                <span class="put_endpoint">update</span><strong>/technology/id</strong>
+                - update an exist technology
+                item.
+            </li>
+            <li>
+                <span class="delete_endpoint">delete</span><strong>/technology/id</strong>
+                - delete an exist technology Item.
             </li>
         </ul>
     </div>
