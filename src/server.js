@@ -12,7 +12,7 @@ const port = process.env.PORT
 app.use(express.json())
 
 // 4. Routes 
-const appRoutes = require('./routes/appRoutes')
+const appRoutes = require('./routes/app_routes')
 app.use('/', appRoutes)
 
 // 5. Conexión a MongoDB
