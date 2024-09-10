@@ -33,8 +33,10 @@ exports.create_technology = [
 // 4. Obtener todos los elementos
 exports.read_all_technologies = async(request, response)=>{
     try{
-        const technology_item = await technology.find()
-        response.json(technology_item)
+        const technology_items = await technology.find()
+        response.json({
+            items:technology_items
+        })
     }catch(error){
         response.status(500).json({
             error:error.message

@@ -11,11 +11,11 @@ router.get('/', (request, response)=>{
 })
 
 // Technology routes
-router.post('/technology', technology_controller.create_technology)
-router.get('/technology', technology_controller.read_all_technologies)
-router.get('/technology/:id', technology_controller.read_technology_by_id)
-router.put('/technology/:id', technology_controller.update_technology_by_id)
-router.delete('/technology/:id', technology_controller.delete_technology_by_id)
+router.post('/technology', technology_controller.create_technology) //private
+router.get('/technology', technology_controller.read_all_technologies) //public
+router.get('/technology/:id', technology_controller.read_technology_by_id) //private
+router.put('/technology/:id', technology_controller.update_technology_by_id) //private
+router.delete('/technology/:id', technology_controller.delete_technology_by_id) //private
 
 // 4. Exportar el router para ser utilizado en otros archivos
 module.exports = router
