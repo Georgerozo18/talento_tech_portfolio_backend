@@ -13,7 +13,7 @@ app.use(express.json())
 
 // 4. Routes 
 const appRoutes = require('./routes/app_routes')
-app.use('/', appRoutes)
+app.use('/api/v1', appRoutes)
 
 // 5. Conexión a MongoDB
 mongoose.connect(process.env.MONGODB_URI)

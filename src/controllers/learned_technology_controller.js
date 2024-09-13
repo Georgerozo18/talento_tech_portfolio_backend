@@ -1,10 +1,18 @@
 // 1. Importar el modelo y las librerías necesarias
 let technology = require('../models/learned_technology_model')
 const multer = require('multer')
-const fs = require('fs')
+const path = require('path')
 
 // 2. Configuración de multer para manejar la carga de archivos
-const storage = multer.memoryStorage()
+const storage = multer.diskStorage({
+    destination: (request, file, callback)=>{
+        callback(null, path.join(__dirname, '../../public/uploads/'))
+    }, 
+    filename: (request, file, callback)=>{
+        const uniqueSuffix = Date.now() + '_' + Math.round(Math.random()* 1E9)
+        callback(null, uniqueSuffix + path.extname(file.originalname))
+    }
+})
 const upload = multer({storage:storage})
 
 // 3. Creación de un elemento
@@ -13,11 +21,9 @@ exports.create_technology = [
 
     async(request, response)=>{
         try{
-            const base_64_image = request.file.buffer.toString('base64')
-
             const new_technology = new technology({
                 name:request.body.name,
-                icon:base_64_image
+                icon:`/uploads/${request.file.filename}`
             })
             
             await new_technology.save()
@@ -74,7 +80,7 @@ exports.update_technology_by_id =[
             })
 
             if(request.file){
-                request.body.icon = request.file.buffer.toString('base64')
+                request.body.icon = `/uploads/${request.file.filename}`
             }
 
             Object.assign(technology_item, request.body)
